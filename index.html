@@ -25,6 +25,7 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 
@@ -38,8 +39,8 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">What I Do</a></li>
-							<li><a href="#two">Who I Am</a></li>
+							<li><a href="#whoiam">Who I Am</a></li>
+							<li><a href="#whatido">What I Do</a></li>
 							<li><a href="#work">My Work</a></li>
 							<li><a href="#contact">Contact me</a></li>
 						</ul>
@@ -55,13 +56,28 @@
 					</header>
 					Product Manager, developer, nerd, <strong>life lover</strong>.</p>
 					<footer>
-						<a href="#one" class="button style2 down">More</a>
+						<a href="#whoiam" class="button style2 down">More</a>
 					</footer>
 				</div>
 			</section>
 
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
+		<!-- who i am -->
+		<section id="whoiam" class="main style2 left dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Who I Am</h2>
+				</header>
+				<p>I'm a father, ....
+
+					Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+			</div>
+			<a href="#whatido" class="button style2 down anchored">Next</a>
+		</section>
+
+		<!-- What i do -->
+			<section id="whatido" class="main style2 right dark fullscreen">
 				<div class="content box style2">
 					<header>
 						<h2>What I Do</h2>
@@ -71,23 +87,9 @@
 						installs in four continents.
 					</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Who I Am</h2>
-					</header>
-					<p>I'm a father, ....
-
-					Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
+
 
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
@@ -130,11 +132,11 @@
 					<!-- Contact Form -->
 							<form method="post" action="#">
 								<div class="row 50%">
-									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u"><input type="email" name="email" placeholder="Email" /></div>
+									<div class="6u"><input type="text" name="name" placeholder="Tell me your name" /></div>
+									<div class="6u"><input type="email" name="email" placeholder="Leave me your email" /></div>
 								</div>
 								<div class="row 50%">
-									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+									<div class="12u"><textarea name="message" placeholder="What can I do for you?" rows="6"></textarea></div>
 								</div>
 								<div class="row">
 									<div class="12u">
@@ -154,6 +156,7 @@
 
 				<!-- Icons -->
 					<ul class="actions">
+						<li>Share</li>
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>

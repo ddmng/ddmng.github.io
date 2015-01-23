@@ -82,19 +82,19 @@
 /* One                                                                           */
 /*********************************************************************************/
 
-	#one {
+	#whatido {
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		background: url('../../images/one.jpg');
 		background-size: cover;
 	}
 
-		#one .content {
+		#whatido .content {
 			position: relative;
 			z-index: 1;
 		}
 
-		#one.left:before,
-		#one.right:after {
+		#whatido.left:before,
+		#whatido.right:after {
 			content: '';
 			background: url('../images/overlay.png');
 			width: 100%;
@@ -108,19 +108,19 @@
 /* Two                                                                           */
 /*********************************************************************************/
 
-	#two {
+	#whoiam {
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		background: url('../../images/two.jpg');
 		background-size: cover;
 	}
 
-		#two .content {
+		#whoiam .content {
 			position: relative;
 			z-index: 1;
 		}
 
-		#two.left:before,
-		#two.right:after {
+		#whoiam.left:before,
+		#whoiam.right:after {
 			content: '';
 			background: url('../images/overlay.png');
 			width: 100%;
