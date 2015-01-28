@@ -1230,7 +1230,7 @@ body {
 /*********************************************************************************/
 
 #intro {
-    background: url('images/overlay.png'), url('../images/intro2.jpg');
+    background: url('images/overlay.png'), url('../images/intro2_small.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1242,7 +1242,7 @@ body {
 /*********************************************************************************/
 
 #whatido {
-    background: url('images/overlay.png'), url('../images/kl.jpg');
+    background: url('images/overlay.png'), url('../images/kl_small.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -1253,7 +1253,7 @@ body {
 /*********************************************************************************/
 
 #whoiam {
-    background: url('images/overlay.png'), url('../images/shells.jpg');
+    background: url('images/overlay.png'), url('../images/shells_small.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
