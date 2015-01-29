@@ -409,7 +409,8 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 .button {
-    background-color: #98c593;
+    /*background-color: #98c593;*/
+    background-color: #3d86d5;
     border: 0;
     border-radius: 3.5em;
     color: #fff;
@@ -422,6 +423,7 @@ input[type="reset"],
     position: relative;
     text-align: center;
     text-decoration: none;
+    font-weight: 600;
 
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -465,14 +467,16 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 .button:hover {
-    background-color: #a8d5a3;
+    /*background-color: #a8d5a3;*/
+    background-color: #6da6f5;
 }
 
 input[type="button"]:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 .button:active {
-    background-color: #88b583;
+    /*background-color: #88b583;*/
+    background-color: #2d86d5;
 }
 
 input[type="button"].style2,
@@ -480,7 +484,7 @@ input[type="submit"].style2,
 input[type="reset"].style2,
 .button.style2 {
     background-color: transparent;
-    border: solid 2px #e5e6e7;
+    border: solid 4px #e5e6e7;
     color: inherit;
 }
 
@@ -1591,3 +1595,5 @@ body.is-touch .poptrox-popup .nav-previous,
 body.is-touch .poptrox-popup .closer {
     opacity: 1.0 !important;
 }
+
+
