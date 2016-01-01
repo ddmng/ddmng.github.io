@@ -646,11 +646,15 @@ input[type="reset"].style2:hover,
 }
 
 .main.style3.primary {
-    background: #fff;
+    background: #dddddd;
 }
 
 .main.style3.secondary {
     background: #f5f6f7;
+}
+
+.links {
+    color: darkgreen;
 }
 
 /* Dark */
@@ -1246,7 +1250,7 @@ body.is-loading:after {
 }
 
 .cert {
-    width: 90%;
+    width: 50%;
 }
 
 /*********************************************************************************/
