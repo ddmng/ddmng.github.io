@@ -1,1 +1,1 @@
-RewriteRule ^now$ /now.html [PT]
+RewriteRule ^/now$ /now.html [PT]
