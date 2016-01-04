@@ -1255,6 +1255,29 @@ body.is-loading:after {
 }
 
 /*********************************************************************************/
+/* 404
+/*********************************************************************************/
+#notfound {
+    background: url('images/overlay.png'), url('../images/404.jpg');
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, top center;
+    background-repeat: repeat, no-repeat;
+}
+
+/*********************************************************************************/
+/* now
+/*********************************************************************************/
+#now {
+    background: url('images/overlay.png'), url('../images/now.jpg');
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, top center;
+    background-repeat: repeat, no-repeat;
+}
+
+
+/*********************************************************************************/
 /* Two                                                                           */
 /*********************************************************************************/
 

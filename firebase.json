@@ -1,0 +1,16 @@
+{
+  "firebase": "blistering-torch-1476",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "rewrites": [ {
+    "source": "/now",
+    "destination": "/now.html"
+  } ]
+
+}

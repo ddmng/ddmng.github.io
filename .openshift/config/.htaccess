@@ -1,1 +1,0 @@
-RewriteRule ^now$ now.html [PT]
