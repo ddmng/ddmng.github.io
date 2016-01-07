@@ -8,9 +8,9 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body {
-		min-width: 320px;
-	}
+	/body {
+	/	min-width: 320px;
+	/}
 
 	body,input,textarea,select {
 		font-size: 12pt;
