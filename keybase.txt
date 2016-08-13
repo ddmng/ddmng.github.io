@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/danielediminica
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.danielediminica.it
+  * I am danielediminica (https://keybase.io/danielediminica) on keybase.
+  * I have a public key with fingerprint 7D3D 8BBA E9A3 1945 F1CD  0BDB FF5A 8E0F 0C62 C1CB
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120cb9733d5f4a423978b22c2e581bc22131a6998db623e7748efe6f58834f9746a0a",
+            "fingerprint": "7d3d8bbae9a31945f1cd0bdbff5a8e0f0c62c1cb",
+            "host": "keybase.io",
+            "key_id": "ff5a8e0f0c62c1cb",
+            "kid": "01015f39c0d983c63764c814937dc082f7755e1ef75c6e2bf6d6ec55b1a50524d1a30a",
+            "uid": "2f840b20e0c41f682140df2c2371bb19",
+            "username": "danielediminica"
+        },
+        "revoke": {
+            "sig_ids": [
+                "2b9589d990957f881f9f8a0e8a0216b8fd6c9acef78ce8180daec05b17ced1530f"
+            ]
+        },
+        "service": {
+            "hostname": "www.danielediminica.it",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471125756,
+    "expire_in": 157680000,
+    "prev": "a353b5e2f5bf3ccb38e95af0d90f2f5a0114d9bf0f0628afd36e7c695ef94102",
+    "seqno": 17,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMO6AnicbZJ5TBRXHMcXFSrLodgqVrC1gxfpus6bmTfHEvtHjWmRlDSaaIvgOu/C
+4Zhdd4dFRETRYA+vin/YeIDReDVVQtWKtEaoMRqrJdajEUNSrNBqoVXaahSxb4n+
+03SSyeS9fH+f95nf751NGu5yxzzL2zQqEbVejLnYFlvmWnh0+0ClgAKkQvBVCsV0
+6ENLCA07/mKLCD5BBJKIkaHJMoFMMRVJNjQdSRKWKNQBwpIEZGCqhqETpEoy1TRF
+p4yqDOq6rDBDU1RTNAWPwCy7kIaCIct2OFYjMtERMqlhysBQIAOYiIggxqCpU5GJ
+WJUwwIgXLg2EoxVcDplh6rUCfI8v/EN6/5N/4S0CyGQDi8TQZazKmqpgHSiGrBEs
+6hLTNAgpoEyDWKUSYipRKYYQAROKUFIIMOUh77IhnMR0RUSSSEWsAKbqElBEwngX
+ZA0gBIxoMExDtllKeZqYtkVLKLFKLdvCplDlEUI0Eiim0faGrULuHhZ8iwQJGVA3
+iGGIBtSYrgNmMN0UKX8loCKdERUbJuaSOqY60EViUixyRw1TAqAsMqGAs/nBEQsP
+waPNei5RXl7u/Y+I13K4aDAUcAI4UMIzSx0nGPZF/ZyK4FARRf7nOD+ybMKHxisi
+NBS2ArbgAzyJHSvKB4oGgAQ1qHoEujxohajfiiagpuoif6Ln0AhHmjKUEaQSg4jJ
+GCNZpwY0GZ+LyPimKQKgEAMxPkRV0k1GZJVqWDUgZYYCREmI/uAyO8DZGvc0CzmT
+99A2nbIQFaraWvNHuGLcrrjYYdHb7HLHj35xx9OejnY1ePvvvB3XH3do5/o909uT
+k6423U7akdI392hf15sD0wbKd/dt746bs2dL+gzpYEvmo9TDy430G082JbnSzlW5
+5+aedJ3U91aXPYmXs1Ib80fcSm+av2bKhft5N9eOS06056++WvT5rdCYuPem7zjR
+OSaY8e3UxR9+8v6p5Kt3vmjvG551afAX/8re6xOqZo8bfK35u1ffmZVdMnlFZHf9
+klfWpTtnOj+u23Ivtsd7ZWfB4KGLhxcapbmPry2wL3tdnhUx5/Yn7DvcsO1m3g91
+x1c6NzKLlsWfToDnI6d7s4Lapw9GruneW9TRvbpjysQGT5vr+tZj2c6EEx3+XZPP
+EiulNnG/XfJ4XMv43/O/SmiquN/Kbrlfzut8qNT0ttS27ttwpPqguzFnWkPi2pHZ
+nqaEs+xB29N57NizClffXxu6rq3Ln7hxqnNg0VJ5vtbTNtY3dnvaiUkDp0b/M2xr
+5O6ouwUzz/UmdMyED2s8sfX5AfRNY+WKbTuuLM5udC79XTM79aDw0Us1WTmt199d
+9Vhp9irprQ/Hn77y45f9m+ty9pMlM4ra22MfefeW1g/0595z/3HgLSP+SFVK5iyS
+vOt8z+XKMZHqYn/3Gn/z7Z8zf+oUh2+8sHJt4fc9Z2rNtjkJC4o/eMNelXKkvqAv
+sCRtUtbkPwsbm48PZmQsLombsHt119Tq1PVf53z2+q+187p+a/El/gsyXOAl
+=CZs5
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/danielediminica
+
+==================================================================
