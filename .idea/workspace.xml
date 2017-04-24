@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55eda564-f789-41c8-86bc-2310e02d8e9b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="personal site v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +88,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="152" column="50" lean-forward="true" selection-start-line="152" selection-start-column="50" selection-end-line="152" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -200,6 +199,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GO_FMT" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -274,7 +274,7 @@
       <updated>1451511233006</updated>
       <workItem from="1451684737582" duration="2272000" />
       <workItem from="1491834557200" duration="362000" />
-      <workItem from="1491836324812" duration="3000" />
+      <workItem from="1491836324812" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="Added external links&#10;Fixed style and colors in &quot;nerd soul&quot; page">
       <created>1451686747307</created>
@@ -381,11 +381,18 @@
       <option name="project" value="LOCAL" />
       <updated>1452208116098</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added certificate">
+      <created>1491836348907</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1491836348907</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2637000" />
+    <option name="totallyTimeSpent" value="2695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -447,7 +454,8 @@
     <MESSAGE value="Changed &quot;nerd&quot; with hacking in both pages" />
     <MESSAGE value="Removed nerd from motto&#10;Changed background images for welcome and about" />
     <MESSAGE value="Added Machine learning blogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Machine learning blogs" />
+    <MESSAGE value="Added certificate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added certificate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -830,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="152" column="50" lean-forward="true" selection-start-line="152" selection-start-column="50" selection-end-line="152" selection-end-column="50" />
           <folding />
         </state>
       </provider>
