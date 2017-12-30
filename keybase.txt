@@ -1,29 +1,25 @@
 ==================================================================
-https://keybase.io/daneel
+https://keybase.io/danielediminica
 --------------------------------------------------------------------
 
 I hereby claim:
 
   * I am an admin of http://www.danielediminica.it
-  * I am daneel (https://keybase.io/daneel) on keybase.
-  * I have a public key ASD-vfKgs_6VkzH1-sSBpfSzu3V8VltVe9_gF6ADoxK0fgo
+  * I am danielediminica (https://keybase.io/danielediminica) on keybase.
+  * I have a public key with fingerprint 7D3D 8BBA E9A3 1945 F1CD  0BDB FF5A 8E0F 0C62 C1CB
 
 To do so, I am signing this object:
 
 {
   "body": {
     "key": {
-      "eldest_kid": "0101a6d0f5fa01aadcf44d0a727dca36c6075222db1e28e88ea74dc3c580151489340a",
+      "eldest_kid": "0120cb9733d5f4a423978b22c2e581bc22131a6998db623e7748efe6f58834f9746a0a",
+      "fingerprint": "7d3d8bbae9a31945f1cd0bdbff5a8e0f0c62c1cb",
       "host": "keybase.io",
-      "kid": "0120febdf2a0b3fe959331f5fac481a5f4b3bb757c565b557bdfe017a003a312b47e0a",
-      "uid": "71c0d289ff56b9c798b2af1d7c422c19",
-      "username": "daneel"
-    },
-    "merkle_root": {
-      "ctime": 1513954976,
-      "hash": "92acb6712f76b334b4a4572746ab8f24f9db1d86b2e0483c35fd56fb85580ee0a31fea5d94b86a231b09ee3ebef993a0fa7abc7ab1a601d3f67d2ea2c91ec811",
-      "hash_meta": "8b5eb118c4d18c0c4d50de1b5c98ec486aedefa38c28bb8de966ed5b0f6d7483",
-      "seqno": 1849833
+      "key_id": "ff5a8e0f0c62c1cb",
+      "kid": "01015f39c0d983c63764c814937dc082f7755e1ef75c6e2bf6d6ec55b1a50524d1a30a",
+      "uid": "2f840b20e0c41f682140df2c2371bb19",
+      "username": "danielediminica"
     },
     "service": {
       "hostname": "www.danielediminica.it",
@@ -32,24 +28,48 @@ To do so, I am signing this object:
     "type": "web_service_binding",
     "version": 1
   },
-  "client": {
-    "name": "keybase.io go client",
-    "version": "1.0.38"
-  },
-  "ctime": 1513955033,
-  "expire_in": 504576000,
-  "prev": "1daa45d2302a55adff1ad5a5ce9576daff78536fb933d1a2d888503f1ad41a52",
-  "seqno": 20,
+  "ctime": 1514643969,
+  "expire_in": 157680000,
+  "prev": "19a2560fa71daf7ef3d2d8c28242b5c36994fa168da961f815d6872588c22fd6",
+  "seqno": 39,
   "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/r3yoLP+lZMx9frEgaX0s7t1fFZbVXvf4BegA6MStH4Kp3BheWxvYWTFA0x7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYTZkMGY1ZmEwMWFhZGNmNDRkMGE3MjdkY2EzNmM2MDc1MjIyZGIxZTI4ZTg4ZWE3NGRjM2M1ODAxNTE0ODkzNDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZmViZGYyYTBiM2ZlOTU5MzMxZjVmYWM0ODFhNWY0YjNiYjc1N2M1NjViNTU3YmRmZTAxN2EwMDNhMzEyYjQ3ZTBhIiwidWlkIjoiNzFjMGQyODlmZjU2YjljNzk4YjJhZjFkN2M0MjJjMTkiLCJ1c2VybmFtZSI6ImRhbmVlbCJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxMzk1NDk3NiwiaGFzaCI6IjkyYWNiNjcxMmY3NmIzMzRiNGE0NTcyNzQ2YWI4ZjI0ZjlkYjFkODZiMmUwNDgzYzM1ZmQ1NmZiODU1ODBlZTBhMzFmZWE1ZDk0Yjg2YTIzMWIwOWVlM2ViZWY5OTNhMGZhN2FiYzdhYjFhNjAxZDNmNjdkMmVhMmM5MWVjODExIiwiaGFzaF9tZXRhIjoiOGI1ZWIxMThjNGQxOGMwYzRkNTBkZTFiNWM5OGVjNDg2YWVkZWZhMzhjMjhiYjhkZTk2NmVkNWIwZjZkNzQ4MyIsInNlcW5vIjoxODQ5ODMzfSwic2VydmljZSI6eyJob3N0bmFtZSI6Ind3dy5kYW5pZWxlZGltaW5pY2EuaXQiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM4In0sImN0aW1lIjoxNTEzOTU1MDMzLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjFkYWE0NWQyMzAyYTU1YWRmZjFhZDVhNWNlOTU3NmRhZmY3ODUzNmZiOTMzZDFhMmQ4ODg1MDNmMWFkNDFhNTIiLCJzZXFubyI6MjAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA5lfIcthEws0mJpqA/mHsJV02jzzY7hJzFGjLpCe83r8Rh+AB6F/FdDTs9ZT3/qgpET7DjBsaBWDfhf22WluSC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJL2yS4NR5Deg//A1CjTwnoXqd27TM2B5c0QENNWbWOLo3RhZ80CAqd2ZXJzaW9uAQ==
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMN4AnicbZJ/TJVVGMfvFaFxZ4AUBE1yvGIm4OU97+/3qljDiNLJ+GVmubv3fc85
+3Dcu917ee+GCSAMVAsVQsCUoIToQJhWYDa0GwRAwItsCN8Qw1pw5io2yULHRe5n+
+0zr/nJ1zPs/3+T7Pcwae9jOYjIu7PwheIfeNGEf62vINu187YywmZCcsIizFRA5a
+2pAdIrfHmqNCwkKQgCIVWeRpGrKYkRiKFnlBpiiFQqwAZIWiAA0kThQFKHMUjXie
+ERBGHGYFgWawyDOcREpEPIFVRzbSXJrq8OiyPKShIMsSEiUaiAyLgQJJGcoYs5KA
+SEwqHKUARdYDbU63L0I3J0tuZFad+p1+sC7Z+x/+iW8SsJgWFRKKAq1wNM8xigAY
+keahQgoU5nmWRQBhnlU4RMmYgxxSWFYGEkuyFAOBRC/5zl+So7DAkDJFIlJhAOYE
+CjAkxHoXaB7IMhB9oBtpDikX6TSUHCqyI6jmqg5VkYiSeEJ/LFAV5Ouvr6DHoNfr
+Nf8HNqseXcylOT1OxWnXGZvH47L4JDxFrqUYJFsfq1ll1QH1vuoBBUhzq04HYQE6
+qXhUnzxgAcMxtMiJ8QQqdKkasqo+guU5gdSXLw0q0CWBKFEsR2KJB1DCPMI0pKCg
+UALFUDKr0Pp4GSwBToCSyAEsABZyAk/pI9bnjyFH+OrLczgJC62n8kjZuqZbzXZI
+nnwNESX9fe8sNxhNhgD/Zb4PZzAFhjz5hn/+GLwop6e2f0bbRt/ouQMfBLw1o5Wn
+RDq8QZ6My0Lc68dT1bCqHxZO5psm0I7Ykrbku1+De83l/WL/auemISmlKWm26lNT
+a4h/8uRwSO66gAFz/tDYr/OzFjb4YLKld7KCE8N/Tvv9wllQ39tQdOX2XEzahsPd
+ETPXEtqzmpsfHb2euaU62jkQfa0s65eWj4bY83EdpvbzdOxwSu3e9e5zwzc4XFGe
+aM6ofv7juam8e9yxbJv/59zo6WONp/KW17IxY6sWN2+sK/4pITzKeNV8aOJ4oFbz
+9s73GiNb1+7huzjt/vT7ruATK8P2yLvm0jb55aTGXIo2pB0pSDg9YzOe6FmZdjOW
+mNcGg9Zt9DaS2tS38uDF8VN1XXGaM+qfsoXB2V1bBx9cjps/EKlgi226QpytPNo1
+sFeLerMiZjY0ffsq3GBoas/4w7tYUx0UMFap9dxOHAx/9Gp9YTdbFftl95VXwvb5
+GzobEu/furVmqGr8qXc7el/KdLkn7XcCVzxnsr/8/dwz0ztGPjwQtqUus6uyIuyI
+n3b9RvCznSHyw4yySxeakvct7D88vqzwt9D+Ba+1dOfazL+vpk+czEradpfoObg/
++q/IzpzWsxUwYvKFqu2lZ9K/mHpoXl3aW1N2yFS7mY24KcW1fBMasIZK6v5k6sXR
+lm1acumGr+wX6891rG8b/a57LGe66V8Et79s
+=L1W8
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/daneel
+View my publicly-auditable identity here: https://keybase.io/danielediminica
 
 ==================================================================
