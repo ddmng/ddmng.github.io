@@ -1236,7 +1236,7 @@ body.is-loading:after {
 /* Intro                                                                         */
 /*********************************************************************************/
 #intro {
-    background: url('images/overlay.png'), url('../images/zen2.jpeg');
+    background: url('images/overlay.png'), url('../images/scott-webb-186137.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1244,7 +1244,7 @@ body.is-loading:after {
 }
 
 #whatido {
-    background: url('images/overlay.png'), url('../images/91.jpg');
+    background: url('images/overlay.png'), url('../images/joel-filipe-171928.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -1273,7 +1273,7 @@ body.is-loading:after {
 /* now
 /*********************************************************************************/
 #now {
-    background: url('images/overlay.png'), url('../images/now.jpg');
+    background: url('images/overlay.png'), url('../images/lukas-blazek-320606.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1286,7 +1286,7 @@ body.is-loading:after {
 /*********************************************************************************/
 
 #whoiam {
-    background: url('images/overlay.png'), url('../images/shell.jpeg');
+    background: url('images/overlay.png'), url('../images/sensei-minimal-429449.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -1578,4 +1578,9 @@ body.is-touch .poptrox-popup .closer {
     opacity: 1.0 !important;
 }
 
-
+.fa-font:before {
+  font-family: roboto;
+  color: #429bf4;
+  font-size: 1.2em;
+  content: "k";
+}
