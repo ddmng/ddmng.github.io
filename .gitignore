@@ -1,2 +1,4 @@
-_site/
-.openshift
+node_modules/
+dist/
+.vscode/temp.sql
+.vscode/last.sql

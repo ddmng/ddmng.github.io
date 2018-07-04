@@ -1,0 +1,40 @@
+{
+  "name": "my-hyperapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cp *html dist/ && npx webpack --config webpack.config.js --mode=production",
+    "serve": "$(npm bin)/webpack-dev-server --port 8081 --host 0.0.0.0 --progress --colors --mode=development"
+  },
+  "keywords": [],
+  "author": "Daniele Di Minica",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "autoprefixer": "^8.6.4",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "file-loader": "^1.1.11",
+    "font-awesome": "^4.7.0",
+    "hyperapp": "^1.2.6",
+    "jquery": "^3.3.1",
+    "jquery-easing": "0.0.1",
+    "popper.js": "^1.14.3",
+    "simple-line-icons": "^2.4.1",
+    "startbootstrap-resume": "^4.0.0"
+  }
+}
