@@ -4,6 +4,10 @@ import './scss/index.scss'
 import './resume'
 
 
+function mailme() {
+  alert("mail!")
+}
+
 const state = {
   count: 0,
   globalBoolean: false
@@ -12,7 +16,7 @@ const state = {
 const actions = {
   down: value => state => ({ count: state.count - value }),
   up: value => state => ({ count: state.count + value }),
-  toggle: value => state => ({ globalBoolean: !state.globalBoolean })
+  toggle: value => state => ({ globalBoolean: !state.globalBoolean }),
 }
 
 const view = (state, actions) => (
