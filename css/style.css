@@ -1236,7 +1236,7 @@ body.is-loading:after {
 /* Intro                                                                         */
 /*********************************************************************************/
 #intro {
-    background: url('images/overlay.png'), url('../images/1.jpg');
+    background: url('images/overlay.png'), url('../images/scott-webb-186137.jpg');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
