@@ -11,7 +11,14 @@
     <meta name="description" content="Daniele Di Minica's personal web site"/>
     <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
     <meta name="keywords" content="website homepage diminica daniele product manager"/>
-
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
     <noscript>
         <link rel="stylesheet" href="css/skel.css"/>
         <link rel="stylesheet" href="css/style.css"/>
@@ -24,6 +31,10 @@
     <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
     <link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic' rel='stylesheet'
           type='text/css'>
+    <link rel="preload" href="//fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/style-wide.css" as="style">
+    <link rel="preload" href="css/style-normal.css" as="style">
     <script>
         function mailme() {
             name = "daniele"
@@ -141,18 +152,18 @@
             BTW, here are my Coursera's accomplishments:
         </p>
         <p>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert12.webp"></a>
-                    <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert11.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86"><img width="400px" height="307" alt="Coursera certificate" class="cert" src="images/cert10.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK"><img width="400px" height="309" alt="Coursera certificate" class="cert" src="images/cert9.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert8.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert7.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert6.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert5.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert4.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert3.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert2.webp"></a>
-               <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC"><img width="400px" alt="Coursera certificate" class="cert" src="images/cert1.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert12.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert11.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86"><img width="400" height="307" alt="Coursera certificate" class="cert" src="images/cert10.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK"><img width="400" height="309" alt="Coursera certificate" class="cert" src="images/cert9.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert8.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert7.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert6.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert5.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert4.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert3.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert2.webp"></a>
+            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert1.webp"></a>
         </p>
     </div>
 </section>
@@ -191,14 +202,6 @@
 
 </footer>
 
-    <!--[if lte IE 8]>
-    <script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.poptrox.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.scrollex.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/init.js"></script>
-</body>
 
+</body>
 </html>
