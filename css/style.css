@@ -1236,7 +1236,7 @@ body.is-loading:after {
 /* Intro                                                                         */
 /*********************************************************************************/
 #intro {
-    background: url('images/overlay.png'), url('../images/scott-webb-186137.jpg');
+    background: url('images/overlay.png'), url('../images/scott-webb-186137.webp');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1244,7 +1244,7 @@ body.is-loading:after {
 }
 
 #whatido {
-    background: url('images/overlay.png'), url('../images/joel-filipe-171928.jpg');
+    background: url('images/overlay.png'), url('../images/joel-filipe-171928.webp');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
@@ -1252,6 +1252,18 @@ body.is-loading:after {
 
 .cert {
     width: 50%;
+    background-image: url('../images/cert1.webp');
+    background-image: url('../images/cert2.webp');
+    background-image: url('../images/cert3.webp');
+    background-image: url('../images/cert4.webp');
+    background-image: url('../images/cert5.webp');
+    background-image: url('../images/cert6.webp');
+    background-image: url('../images/cert7.webp');
+    background-image: url('../images/cert8.webp');
+    background-image: url('../images/cert9.webp');
+    background-image: url('../images/cert10.webp');
+    background-image: url('../images/cert11.webp');
+    background-image: url('../images/cert12.webp');
 }
 
 .strikethrough {
@@ -1262,7 +1274,7 @@ body.is-loading:after {
 /* 404
 /*********************************************************************************/
 #notfound {
-    background: url('images/overlay.png'), url('../images/404.jpg');
+    background: url('images/overlay.png'), url('../images/404.webp');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1273,7 +1285,7 @@ body.is-loading:after {
 /* now
 /*********************************************************************************/
 #now {
-    background: url('images/overlay.png'), url('../images/lukas-blazek-320606.jpg');
+    background: url('images/overlay.png'), url('../images/lukas-blazek-320606.webp');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, top center;
@@ -1286,7 +1298,7 @@ body.is-loading:after {
 /*********************************************************************************/
 
 #whoiam {
-    background: url('images/overlay.png'), url('../images/sensei-minimal-429449.jpg');
+    background: url('images/overlay.png'), url('../images/sensei-minimal-429449.webp');
     background-size: 256px 256px, cover;
     background-attachment: fixed, fixed;
     background-position: top left, center center;
