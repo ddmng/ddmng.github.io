@@ -1,203 +1,528 @@
-<!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <title>Daniele's personal web site</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="Daniele Di Minica's personal web site"/>
-    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=1">
-    <meta name="keywords" content="website homepage diminica daniele product manager"/>
-    <!--[if lte IE 8]>
-    <script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.poptrox.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.scrollex.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-wide.css"/>
-        <link rel="stylesheet" href="css/style-normal.css"/>
-    </noscript>
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
-    <link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic' rel='stylesheet'
-          type='text/css'>
-    <link rel="preload" href="//fonts.googleapis.com/css?family=Josefin+Sans:400,400italic,700,700italic" as="style">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="css/style-wide.css" as="style">
-    <link rel="preload" href="css/style-normal.css" as="style">
-    <script>
-        function mailme() {
-            name = "daniele"
-            surname = ".diminica"
-            domain = "@gmail.com";
-            window.location = ("mailto:" + name + surname + domain);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniele Di Minica | Product Manager & Tech Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            overflow-x: hidden;
         }
-    </script>
+
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mouse Glow Effect */
+        #cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 <body>
+    <div id="cursor-glow"></div>
 
-<!-- Header -->
-<header id="header">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">
+            <span class="gradient-text">D</span>DM
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <!-- Logo -->
-    <h1 id="logo"><a role="button" aria-label="Home page" href="#">Daniele Di Minica</a></h1>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li><a aria-label="Intro" href="#intro">Welcome</a></li>
-            <li><a aria-label="Who I am" href="#whoiam">About me</a></li>
-            <li><a aria-label="What I do" href="#whatido">My job</a></li>
-            <li><a aria-label="My works" href="#work">Hacking</a></li>
-            <!--li><a href="now">Now</a></li-->
-            <li><a aria-label="Contact me" href="#contact">Contact me</a></li>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 font-medium">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full glass p-6 flex flex-col space-y-4 md:hidden text-center border-t border-slate-700">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
     </nav>
 
-</header>
-
-<!-- Intro -->
-<section id="intro" class="main style1 dark fullscreen">
-    <div class="content container 75%">
-        <header>
-            <h2 aria-label="name" id="myname">Daniele Di Minica</h2>
-        </header>
-
-        <label aria-label="motto" aria-level="1" role="heading" id="motto">Product Manager, Father, and Curious Mind Navigating Tech and Life.</label>
-
-        <br>
-        <footer>
-            <a aria-label="Who I am" href="#whoiam" class="button style2 down">More</a>
-        </footer>
-    </div>
-</section>
-
-<!-- About -->
-<section id="whoiam" class="main style2 left dark fullscreen">
-    <div class="content box style2">
-        <header>
-            <h2>About me</h2>
-        </header>
-        <p>Hello, I'm Daniele. I'm the Product Manager for AI-based Automated Diagnostic in the 
-            <a aria-label="Go to Anritsu.com" href="https://www.anritsu.com/en-gb/">market leader company</a> for Telecom Service Assurance.<br>
-            I’m passionate about solving complex problems, building great products, and connecting with people.<br>
-            Outside of work, I love hacking, traveling, running, cycling, learning new languages — and above all, spending time with my family.</p>
-    </div>
-    <a aria-label="What I do" href="#whatido" class="button style2 down anchored">Next</a>
-</section>
-
-<!-- My job -->
-<section id="whatido" class="main style2 right dark fullscreen">
-    <div class="content box style2">
-        <header>
-            <h2>My job</h2>
-        </header>
-        <p>Where do I start?<br>
-		Leading, communicating, motivating.<br>
-		Planning, designing, testing.<br>
-            Meeting customers, doing demos, speaking at conferences<br>
-		Learning, sharing, supporting — and then back to the start!
-        </p>
-    </div>
-    <a aria-label="My works" href="#work" class="button style2 down anchored">Next</a>
-</section>
-
-
-<!-- Work -->
-<section id="work" class="main style3 primary">
-    <div class="content container box 75%">
-        <header>
-            <h2>Hacking, learning, updating</h2>
-        </header>
-        <p>I'm interested in product management, machine learning, the Telco market, economics, computer languages,
-            Internet and privacy issues. I constantly mine for news, information and insights
-            in every direction. My favourite sources are:
-        <ul>
-            <li><a class="links" aria-label="Alex Cowan - new window" target="_blank" href="https://www.alexandercowan.com/">Alex Cowan</a></li>
-            <li><a class="links" aria-label="Hacker News - new window" target="_blank" href="https://news.ycombinator.com/">Hacker News</a></li>
-            <li><a class="links" aria-label="dev.to - new window" target="_blank" href="https://dev.to/">dev.to</a>
-            <li><a class="links" aria-label="Towards data science - new window" target="_blank" href="https://towardsdatascience.com/">Towards Data Science</a></li>
-            <li><a class="links" aria-label="Machine learning mastery - new window" target="_blank" href="https://machinelearningmastery.com/blog/">Machine learning mastery</a></li>
-            <li><a class="links" aria-label="Fast.ai - new window" target="_blank" href="https://www.fast.ai/">Fast.ai</a></li>
-            <li><a class="links" aria-label="No free hunch - new window" target="_blank" href="http://blog.kaggle.com/">no free hunch</a></li>
-            <li><a class="links" aria-label="Charles Martin Machine learning - new window" target="_blank" href="https://charlesmartin14.wordpress.com/">Machine Learning</a></li>
-            <li><a class="links" aria-label="O'Reilly Radar - new window" target="_blank" href="http://radar.oreilly.com/">O'Reilly Radar</a></li>
-            <li><a class="links" aria-label="The Fast Mode - new window" target="_blank" href="https://www.thefastmode.com/">The Fast Mode</a></li>
-            <li><a class="links" aria-label="Creative Bloq - new window" target="_blank" href="http://www.creativebloq.com/">Creative Bloq</a></li>
-            <li><a class="links" aria-label="Ars Technica - new window" target="_blank" href="http://arstechnica.com/">Ars Technica</a></li>
-            <li><a class="links" aria-label="Wired - new window" target="_blank" href="https://www.wired.com/">Wired</a></li>
-            <li><a class="links" aria-label="The Intercept - new window" target="_blank" href="https://theintercept.com/">The Intercept</a></li>
-            <li><a class="links" aria-label="The Economist - new window" target="_blank" href="https://www.economist.com/">The Economist</a></li>
-            <li><a class="links" aria-label="The Citizen Lab - new window" target="_blank" href="https://citizenlab.ca/">The Citizen Lab</a></li>
-            <li><a class="links" aria-label="Politico - new window" target="_blank" href="https://www.politico.com/">Politico</a></li>
-        <li> ... and many others.</li>
-        </ul>
-
-        <!--Check what I'm doing <a href="now">now</a-->
-        </p>
-
-        <p>
-            BTW, here are my Coursera's accomplishments:
-        </p>
-        <p>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert12.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert11.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86"><img width="400" height="307" alt="Coursera certificate" class="cert" src="images/cert10.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK"><img width="400" height="309" alt="Coursera certificate" class="cert" src="images/cert9.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert8.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert7.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert6.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert5.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert4.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert3.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert2.webp"></a>
-            <a aria-label="Coursera certificate" href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC"><img width="400" height="auto" alt="Coursera certificate" class="cert" src="images/cert1.webp"></a>
-        </p>
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="main style3 secondary">
-    <div class="content container">
-        <header>
-            <h2>Contact me</em></h2>
-            <p>Do you want to know more?</p>
-        </header>
-        <div class="box container 75%">
-            Find me on
-            <ul class="actions">
-                <li>https://it.linkedin.com/in/danielediminica</li>
-                <li><a aria-label="Send me an email" role="button" id="mailme" onclick="mailme()" href="#" class="icon fa-envelope"><span class="label"></span></a></li>
-            </ul>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+        <div class="max-w-5xl text-center z-10">
+            <!-- Increased font size for Name -->
+            <h1 class="text-6xl md:text-9xl font-extrabold mb-4 tracking-tight reveal">
+                Daniele <span class="gradient-text">Di Minica</span>
+            </h1>
+            <!-- Reduced font size for Professional Tagline -->
+            <h2 class="text-2xl md:text-4xl font-semibold text-slate-300 mb-8 reveal">
+                Product Manager. Curious Mind.
+            </h2>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto reveal leading-relaxed">
+                Navigating Tech and Life through AI, Automation, and Telecom Innovation.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+                <a href="#experience" class="px-10 py-4 bg-sky-500 hover:bg-sky-600 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-sky-500/20">My Journey</a>
+                <a href="#contact" class="px-10 py-4 border border-slate-700 hover:border-sky-400 rounded-full font-bold transition-all">Get in Touch</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer id="footer">
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <!-- Placeholder for Profile Picture -->
+                <div class="w-full aspect-square glass rounded-2xl flex items-center justify-center border-2 border-dashed border-slate-700 overflow-hidden group">
+                    <img alt="profile picture" src="images/profile_pic.png">
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-3xl font-bold mb-6 gradient-text">About Me</h2>
+                <p class="text-lg text-slate-300 mb-6">
+                    Hello, I'm Daniele. I'm the Product Manager for AI-based Automated Diagnostics at a market leader in Telecom Service Assurance. 
+                    I'm passionate about solving complex problems, building great products, and connecting with people.
+                </p>
+                <p class="text-lg text-slate-300 mb-6">
+                    With over 20 years of experience in security, intelligence, and telecommunications, I focus on the intersection of data and user experience.
+                </p>
+                <p class="text-lg text-slate-300 mb-6">
+                    I'm passionate about running, cycling, learning new languages, hacking and, above all, spending time with my family.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 glass rounded-xl">
+                        <span class="block text-sky-400 font-bold text-2xl">10+ years</span>
+                        <span class="text-sm text-slate-400">in Product Mgmt</span>
+                    </div>
+                    <div class="p-4 glass rounded-xl">
+                        <span class="block text-sky-400 font-bold text-2xl">5+ years</span>
+                        <span class="text-sm text-slate-400">in Telco Market</span>
+                    </div>
+                    <div class="p-4 glass rounded-xl">
+                        <span class="block text-sky-400 font-bold text-2xl">9+ years</span>
+                        <span class="text-sm text-slate-400">in Intelligence and Security market</span>
+                    </div>
+                    <div class="p-4 glass rounded-xl">
+                        <span class="block text-sky-400 font-bold text-2xl">20+ years</span>
+                        <span class="text-sm text-slate-400">of Software Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Menu -->
-    <ul class="menu">
-        <li><a rel="license" target="_blank" aria-label="Creative commons - new window" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License"
-                                                                                                     style="border-width:0"
-                                                                                                     src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
-        </li>
-        <li>Design based on <a href="//html5up.net" aria-label="html5up - new window" target="_blank">HTML5 UP</a></li>
-        <li>Photo credits: <a href="//unsplash.com" aria-label="unsplash - new window" target="_blank">Unsplash</a></li>
-    </ul>
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center reveal">My Professional Journey</h2>
 
-</footer>
+        <div class="space-y-8">
+            <!-- Experience Item 1 -->
+            <div class="reveal glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
+                <div class="md:w-1/4">
+                    <span class="text-sky-400 font-bold">Currently</span>
+                    <h3 class="text-xl font-bold mt-1">Product Manager</h3>
+                    <p class="text-slate-400">Telco Service Assurance</p>
+                </div>
+                <div class="md:w-3/4">
+                    <p class="text-slate-300">
+                        <b>Senior Product Manager | AI &and; API Automation</b> -
+                        Leading lead the global AI Diagnostics and API portfolio, driving strategy and GTM for Tier-1
+                        operators across four continents. Delivered double-digit improvements in root cause analysis
+                        through advanced AI integration. Additionally, serving as Security Champion for SSDLC compliance
+                        and lead SAFe Agile transformation to streamline enterprise-wide delivery and time-to-market.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="reveal glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 opacity-80">
+                <div class="md:w-1/4">
+                    <span class="text-slate-500 font-bold">Past Role</span>
+                    <h3 class="text-xl font-bold mt-1">Product Manager</h3>
+                    <p class="text-slate-400">Security &amp; Intelligence</p>
+                </div>
+                <div class="md:w-3/4">
+                    <p class="text-slate-300">
+                        <b>Product Manager</b> of a deep learning-based Fusion Center platform designed for real-time situational
+                        awareness. Integrating location data, radar inputs, and geo-tagged multimedia from hundreds of thousands of
+                        sources to deliver a comprehensive, unified view of regional security status, supporting critical
+                        operations in defense and public safety domains.<br>
+                        <b>Product Manager</b> of the leader Law Enforcement Monitoring Facility product, serving 20+ countries worldwide
+                        in their mission to elevate the public safety to a higher standard.
+                    </p>
+                </div>
+            </div>
+            <!-- Experience Item 3 -->
+            <div class="reveal glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 opacity-80">
+                <div class="md:w-1/4">
+                    <span class="text-slate-500 font-bold">Previous experiences</span>
+                    <h3 class="text-xl font-bold mt-1">Engineering</h3>
+                    <p class="text-slate-400">Enterprise Development</p>
+                </div>
+                <div class="md:w-3/4">
+                    <p class="text-slate-300">
+                        <b>Engineering Manager</b> of the company’s cross-functional AI team, leading the development and deployment
+                        of machine learning solutions across multiple business areas.<br>
+                        <b>Engineering Team Manager</b> for the successful implementation of an Avaya Aura Contact Center recording system,
+                        enabling secure, high-quality voice capture and compliance monitoring.
+                        Led the development of a script analysis solution aimed at enhancing Contact Center performance and customer
+                        experience through intelligent quality assessment and optimization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills/Interests -->
+    <section id="skills" class="py-24 px-6 md:px-12 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12 reveal">Skills &amp; Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-project-diagram text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Product Strategy</h4>
+                    <small>Strategic Roadmapping and multi-million € portfolio leadership</small>
+                </div>
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-network-wired text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Telco Market</h4>
+                    <small>Deep expertise in Service Assurance for NOC and Engineering teams.</small>
+                </div>
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-globe text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Intelligence Market</h4>
+                    <small>Deep expertise Intelligence and Lawful Interception markets.</small>
+                </div>
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-brain text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Artificial Intelligence</h4>
+                    <small>Multiple certifications, hands-on experiences, production delivery from 2019</small>
+                </div>
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-user-group text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Team leadership</h4>
+                    <small>Managed teams with up to 20 senior engineers and project managers.</small>
+                </div>
+
+                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
+                    <i class="fas fa-code text-3xl text-sky-400 mb-4"></i>
+                    <h4 class="font-bold">Tech</h4>
+                    <small>Always up-to-date on latest tech and trends.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Placeholder -->
+    <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center reveal">Certifications</h2>
+        <div class="grid md:grid-cols-3 gap-6 reveal">
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Deep Learning Specialization
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS" target="_blank">
+                    <img alt="certificate" src="images/cert12.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Sequence Models Course
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT" target="_blank">
+                    <img alt="certificate" src="images/cert11.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Structuring Machine Learning Projects
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86" target="_blank">
+                    <img alt="certificate" src="images/cert10.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Improving Deep Neural Networks
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK" target="_blank">
+                    <img alt="certificate" src="images/cert9.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Neural Networks and Deep Learning
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV" target="_blank">
+                    <img alt="certificate" src="images/cert8.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Convolutional Neural Networks
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M" target="_blank">
+                    <img alt="certificate" src="images/cert7.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Functional Programming in Scala
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7" target="_blank">
+                    <img alt="certificate" src="images/cert6.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Big Data Analysis with Scala and Spark
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ" target="_blank">
+                    <img alt="certificate" src="images/cert5.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Parallel Programming
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B" target="_blank">
+                    <img alt="certificate" src="images/cert4.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Functional Program Design in Scala
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X" target="_blank">
+                    <img alt="certificate" src="images/cert3.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Functional Programming Principles in Scala
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T" target="_blank">
+                    <img alt="certificate" src="images/cert2.webp">
+                    </a>
+                </p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center text-slate-500">
+                Machine Learning
+                <p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC" target="_blank">
+                    <img alt="certificate" src="images/cert1.webp">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
 
 
+    <!-- Links -->
+    <section class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center reveal">Interesting sources I follow</h2>
+        <div class="grid md:grid-cols-3 gap-6 reveal">
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.alexandercowan.com/" target="_blank">Alex Cowan</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://dev.to//" target="_blank">dev.to</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://machinelearningmastery.com/blog/" target="_blank">Machine learning mastery</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.fast.ai/" target="_blank">Fast AI</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="http://blog.kaggle.com/" target="_blank">Kaggle blog</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://charlesmartin14.wordpress.com/" target="_blank">calculated</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="http://radar.oreilly.com/" target="_blank">O'Reilly Radar</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.thefastmode.com/" target="_blank">The Fast Mode</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="http://www.creativebloq.com/" target="_blank">Creative Bloq</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="http://arstechnica.com/" target="_blank">Ars Technica</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.wired.com/" target="_blank">Wired</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://theintercept.com/" target="_blank">The Intercept</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.economist.com/" target="_blank">The Economist</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://citizenlab.ca/" target="_blank">The Citizen Lab</a></p>
+            </div>
+            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center text-slate-500">
+                <p><a href="https://www.politico.com/" target="_blank">Politico</a></p>
+            </div>
+            ...and many others.
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-sky-500/10">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
+            <p class="text-xl text-slate-400 mb-10">
+                I'm always open to discussing tech, product management, or the latest in Telco.
+            </p>
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="https://it.linkedin.com/in/danielediminica" class="text-4xl hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.danielediminica.it" class="text-4xl hover:text-sky-400 transition-colors"><i class="fas fa-globe"></i></a>
+                <a href="mailto:contact@danielediminica.it" class="text-4xl hover:text-sky-400 transition-colors"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="glass p-8 rounded-3xl inline-block">
+                <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Available for</p>
+                <p class="text-lg">Collaborations • Speaking • Tech Strategy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 text-center border-t border-slate-800 text-slate-500 text-sm">
+        <p>© <span id="year"></span> Daniele Di Minica. Built with Clean Code &amp; Curiosity.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const glow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal();
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = link.getAttribute('href') === `#${current}` ? '#38bdf8' : '';
+            });
+        });
+    </script>
 </body>
 </html>
