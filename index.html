@@ -1,624 +1,193 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daniele Di Minica's personal web site">
-    <title>Daniele Di Minica | Product Manager &amp; Tech Enthusiast</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.danielediminica.it:24575/js/pa-OLohS4YQWNEemQsfx34J2.js"></script>
-    <script>
-        window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
-        plausible.init()
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'); */
-
-        body {
-            font-family: 'Inter', sans-serif;
-            font-display: optional;
-            background-color: #0f172a;
-            color: #f1f5f9;
-            overflow-x: hidden;
-        }
-
-        .glass {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-link {
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #38bdf8;
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h3>a {
-            text-decoration: underline;
-            text-decoration-color: #818cf8;
-            text-decoration-style: dashed;
-        }
-        p>a {
-            text-decoration: underline;
-            text-decoration-color: #818cf8;
-            text-decoration-style: dashed;
-        }
-        .contacts {
-            text-decoration: underline;
-            text-decoration-color: #818cf8;
-            text-decoration-style: dashed;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daniele Di Minica, Product Manager for AI Diagnostics in Telco Service Assurance."><meta property="og:title" content="Daniele Di Minica | Product Manager"><meta property="og:description" content="AI, automation and innovation in Telco Service Assurance."><title>Daniele Di Minica | Product Manager & Tech Enthusiast</title>
+<style>
+:root{--bg:#fafaf9;--surf:#fff;--ink:#1c1f26;--mut:#5d6472;--line:#e6e7ea;--acc:#3b5bdb;--soft:#eef1fd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161a;--surf:#1b1e24;--ink:#eceef2;--mut:#9aa1ae;--line:#2a2e36;--acc:#8ea4ff;--soft:#222842}}
+:root[data-theme="dark"]{--bg:#14161a;--surf:#1b1e24;--ink:#eceef2;--mut:#9aa1ae;--line:#2a2e36;--acc:#8ea4ff;--soft:#222842}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav .w{display:flex;align-items:center;gap:20px;height:56px;overflow-x:auto}
+nav b{font-weight:700;letter-spacing:.5px;margin-right:auto}
+nav a{color:var(--mut);font-size:14px;white-space:nowrap}
+section{padding:56px 0 8px}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+h2{font-size:24px;margin:0 0 24px;letter-spacing:-.01em}
+h3{font-size:18px;margin:0 0 2px}
+.hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding-top:72px}
+.role{font-size:20px;color:var(--acc);font-weight:600;margin:0 0 8px}
+.lead{color:var(--mut);font-size:18px;max-width:52ch;margin:0 0 24px}
+.avatar{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid var(--surf);box-shadow:0 0 0 2px var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{padding:9px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surf);color:var(--ink);font-size:15px}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+.btn:hover{text-decoration:none;border-color:var(--acc)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{display:block;font-size:26px;color:var(--acc);line-height:1.2}
+.stat span{color:var(--mut);font-size:14px}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.job{position:relative;margin-bottom:30px}
+.job:before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--acc)}
+.job.now:before{background:var(--acc)}
+.meta{color:var(--mut);font-size:14px;margin-bottom:8px}
+.tag{display:inline-block;background:var(--soft);color:var(--acc);font-size:12px;padding:1px 9px;border-radius:99px;margin-right:6px}
+.job p{margin:0 0 8px;max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card .meta{margin:0 0 6px}
+.card h3 a{color:var(--ink)}
+.card p{margin:8px 0 0;color:var(--mut);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skills .card{padding:16px}
+.skills h3{font-size:16px}
+.skills p{font-size:14px;margin:6px 0 0}
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px}
+.certs a{display:block;padding:9px 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:5px 12px;border-radius:99px;font-size:14px}
+.cta{background:var(--soft);border-radius:16px;padding:32px;margin-bottom:56px}
+.cta p{margin:0 0 16px;max-width:60ch}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;padding:24px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.avatar{order:-1;width:110px;height:110px}.stats,.skills{grid-template-columns:repeat(2,1fr)}.cards,.certs{grid-template-columns:1fr}}
+nav a.on{color:var(--acc);font-weight:600}
+.job.now .box{background:var(--surf);border:1px solid var(--acc);border-radius:12px;padding:18px 20px;margin-left:-4px}
+.job ul{margin:0 0 6px;padding-left:18px;max-width:70ch}.job li{margin-bottom:5px}
+.cg{margin-bottom:22px}.cg h3{font-size:15px;color:var(--mut);font-weight:600;margin-bottom:4px}
+.pos{font-size:15px;color:var(--ink);margin:-8px 0 24px;max-width:52ch}
+.more{font-size:14px}
+</style>
 </head>
-
 <body>
-    <div id="cursor-glow"></div>
+<nav><div class="w"><b>DDM</b>
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#articles">Articles</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#links">Links</a><a href="#contact">Contact</a></div></nav>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tighter">
-            <span class="gradient-text">D</span>DM
-        </div>
+<main class="w">
+<section id="home" class="hero">
+<div>
+<h1>Daniele Di Minica</h1>
+<p class="role">Product Manager. Curious Mind.</p>
+<p class="lead">Navigating Tech and Life through AI, Automation, and Innovation.</p>
+<p class="pos">I lead AI Diagnostics and API products for Tier-1 telecom operators, after 10+ years building security and intelligence platforms.</p>
+<div class="btns"><a class="btn p" href="#experience">My Journey</a><a class="btn" href="#articles">My latest articles</a><a class="btn" href="#contact">Get in Touch</a></div>
+</div>
+<img class="avatar" alt="Daniele Di Minica" src="data:image/webp;base64,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">
+</section>
 
-        <!-- Mobile Menu Button -->
-        <button type="button" id="menu-btn" class="md:hidden text-2xl focus:outline-none" aria-label="Toggle Menu">
-            <i class="fas fa-bars"></i>
-        </button>
+<section id="about">
+<h2>About me</h2>
+<p style="max-width:70ch">Hello, I’m Daniele. I’m the Product Manager for AI-based Automated Diagnostics at the <a href="https://www.anritsu.com/en-gb/service-assurance">market leader Company in Telecom Service Assurance</a>. I’m passionate about solving complex problems, building great products, and connecting with people.</p>
+<p style="max-width:70ch">With over 20 years of experience in security, intelligence, and telecommunications, I focus on the intersection of data and user experience.</p>
+<p style="max-width:70ch">I’m passionate about running, cycling, learning new languages, hacking and, above all, spending time with my family.</p>
+<div class="stats">
+<div class="stat"><b>10+</b><span>years Product Management</span></div>
+<div class="stat"><b>5+</b><span>years Telco market</span></div>
+<div class="stat"><b>9+</b><span>years Intelligence and Security market</span></div>
+<div class="stat"><b>20+</b><span>years Software Engineering</span></div>
+</div>
+</section>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-8 font-medium">
-            <li><a href="#home" class="plausible-event-name=Home nav-link">Home</a></li>
-            <li><a href="#about" class="plausible-event-name=About nav-link">About</a></li>
-            <li><a href="#experience" class="plausible-event-name=Experience nav-link">Experience</a></li>
-            <li><a href="#articles" class="plausible-event-name=Articles nav-link">Articles</a></li>
-            <li><a href="#skills" class="plausible-event-name=Skills nav-link">Skills</a></li>
-            <li><a href="#certifications" class="plausible-event-name=Certifications nav-link">Certifications</a></li>
-            <li><a href="#links" class="plausible-event-name=Links nav-link">Links</a></li>
-            <li><a href="#contact" class="plausible-event-name=Contact nav-link">Contact</a></li>
-        </ul>
+<section id="experience">
+<h2>My professional journey</h2>
+<div class="tl">
+<div class="job now"><div class="box">
+<span class="tag">Currently</span>
+<h3><a href="https://www.anritsu.com/en-gb/service-assurance">Senior Product Manager</a></h3>
+<div class="meta">Telco Service Assurance · AI Diagnostics &amp; API Automation</div>
+<ul>
+<li>Lead the global AI Diagnostics and API portfolio, driving strategy and GTM for Tier-1 operators across four continents.</li>
+<li>Delivered double-digit improvements in root cause analysis through advanced AI integration.</li>
+<li>Security Champion for SSDLC compliance.</li>
+<li>Lead the SAFe Agile transformation to streamline enterprise-wide delivery and time-to-market.</li>
+</ul></div></div>
+<div class="job">
+<span class="tag">Past role</span>
+<h3><a href="https://www.ips-intelligence.com/en/solutions">Product Manager</a></h3>
+<div class="meta">Security &amp; Intelligence</div>
+<ul>
+<li>Fusion Center platform based on deep learning, for real-time situational awareness: location data, radar inputs and geo-tagged multimedia from hundreds of thousands of sources in one unified view of regional security. Used in defense and public safety.</li>
+<li>Leader Law Enforcement Monitoring Facility product, serving 20+ countries worldwide in elevating public safety to a higher standard.</li>
+</ul></div>
+<div class="job">
+<span class="tag">Previous experiences</span>
+<h3><a href="https://www.ips-intelligence.com/en/lawful-interception">Engineering Team Manager</a></h3>
+<div class="meta">Enterprise Development</div>
+<ul>
+<li>Managed the company’s cross-functional AI team, developing and deploying machine learning solutions across multiple business areas.</li>
+<li>Delivered an Avaya Aura Contact Center recording system for secure, high-quality voice capture and compliance monitoring.</li>
+<li>Led a script analysis solution that improves Contact Center performance and customer experience through intelligent quality assessment.</li>
+</ul></div>
+</div>
+</section>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu"
-            class="hidden absolute top-full left-0 w-full glass p-6 flex flex-col space-y-4 md:hidden text-center border-t border-slate-700">
-            <a href="#home" class="plausible-event-name=Home mobile-nav-link">Home</a>
-            <a href="#about" class="plausible-event-name=About mobile-nav-link">About</a>
-            <a href="#experience" class="plausible-event-name=Experience mobile-nav-link">Experience</a>
-            <a href="#articles" class="plausible-event-name=Articles mobile-nav-link">Articles</a>
-            <a href="#skills" class="plausible-event-name=Skills mobile-nav-link">Skills</a>
-            <a href="#links" class="plausible-event-name=Links mobile-nav-link">Links</a>
-            <a href="#contact" class="plausible-event-name=Contact mobile-nav-link">Contact</a>
-        </div>
-    </nav>
+<section id="articles">
+<h2>Articles</h2>
+<div class="cards">
+<article class="card"><div class="meta">Aug 8, 2023 · Medium</div>
+<h3><a href="https://medium.com/anritsu-service-assurance/leveraging-data-for-network-and-service-optimization-the-power-of-pcap-exports-and-ai-models-927edd482818">Leveraging Data for Network and Service Optimization: The Power of PCAP Exports and AI Models</a></h3>
+<p>How operators can turn PCAP data from a troubleshooting tool into a foundation for AI, moving from reactive maintenance to proactive optimization.</p></article>
+<article class="card"><div class="meta">June 11, 2026 · Anritsu Service Assurance</div>
+<h3><a href="https://service-assurance.anritsu.eu/blog/the-real-cost-of-a-4-hour-outage">The Real Cost of a 4-Hour Outage (It Is Not What Your SLA Says)</a></h3>
+<p>The SLA penalty is only a starting point: why the real cost of poor network reliability is far higher, and what that means for investing in operations.</p></article>
+</div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-        <div class="max-w-6xl text-center z-10">
-            <!-- Increased font size for Name -->
-            <h1 class="text-6xl md:text-9xl font-extrabold mb-4 tracking-tight ">
-                Daniele <span class="gradient-text">Di Minica</span>
-            </h1>
-            <!-- Reduced font size for Professional Tagline -->
-            <h2 class="text-2xl md:text-4xl font-semibold text-slate-300 mb-8 ">
-                Product Manager. Curious Mind.
-            </h2>
-            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto  leading-relaxed">
-                Navigating Tech and Life through AI, Automation, and Innovation.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 ">
-                <a href="#experience"
-                    class="plausible-event-name=Journey px-10 py-4 bg-sky-500 hover:bg-sky-600 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-sky-500/20">My
-                    Journey</a>
-                <a href="#articles"
-                    class="plausible-event-name=Articles px-10 py-4 border border-slate-700 hover:border-sky-400 rounded-full font-bold transition-all">My latest articles</a>
-                <a href="#contact"
-                    class="plausible-event-name=GetInTouch px-10 py-4 border border-slate-700 hover:border-sky-400 rounded-full font-bold transition-all">Get
-                    in Touch</a>
-            </div>
-        </div>
-    </section>
+<section id="skills">
+<h2>Skills &amp; expertise</h2>
+<div class="skills">
+<div class="card"><h3>Product Strategy</h3><p>Strategic Roadmapping and multi-million € portfolio leadership</p></div>
+<div class="card"><h3>Telco Market</h3><p>Deep expertise in Service Assurance for NOC and Engineering teams.</p></div>
+<div class="card"><h3>Intelligence Market</h3><p>Deep expertise Intelligence and Lawful Interception markets.</p></div>
+<div class="card"><h3>Artificial Intelligence</h3><p>Multiple certifications, hands-on experiences, production delivery from 2019</p></div>
+<div class="card"><h3>Communication</h3><p>Presentation and communication skills, public speaking at events.</p></div>
+<div class="card"><h3>Deep user empathy</h3><p>Understanding the customers’ “pain points” rather than just the features they ask for.</p></div>
+<div class="card"><h3>Team leadership</h3><p>Managed teams with up to 20 senior engineers and project managers.</p></div>
+<div class="card"><h3>Tech</h3><p>Always up-to-date on latest tech and trends.</p></div>
+</div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 px-6 md:px-12 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="">
-                <!-- Placeholder for Profile Picture -->
-                <div
-                    class="w-full aspect-square glass rounded-2xl flex items-center justify-center border-2 border-dashed border-slate-700 overflow-hidden group">
-                    <img alt="profile picture" src="images/profile_pic_small.webp" class="w-full">
-                </div>
-            </div>
-            <div class="">
-                <h2 class="text-3xl font-bold mb-6 gradient-text">About Me</h2>
-                <p class="text-lg  mb-6">
-                    Hello, I'm Daniele. I'm the Product Manager for AI-based Automated Diagnostics at the <a href="https://www.anritsu.com/en-gb/service-assurance"
-                            target="_blank">market leader Company in Telecom Service Assurance</a>.
-                    I'm passionate about solving complex problems, building great products, and connecting with people.
-                </p>
-                <p class="text-lg  mb-6">
-                    With over 20 years of experience in security, intelligence, and telecommunications, I focus on the
-                    intersection of data and user experience.
-                </p>
-                <p class="text-lg  mb-6">
-                    I'm passionate about running, cycling, learning new languages, hacking and, above all, spending time
-                    with my family.
-                </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-4 glass rounded-xl">
-                        <span class="block text-sky-400 font-bold text-2xl">10+ years</span>
-                        <span class="text-sm text-slate-400">Product Management</span>
-                    </div>
-                    <div class="p-4 glass rounded-xl">
-                        <span class="block text-sky-400 font-bold text-2xl">5+ years</span>
-                        <span class="text-sm text-slate-400">Telco Market</span>
-                    </div>
-                    <div class="p-4 glass rounded-xl">
-                        <span class="block text-sky-400 font-bold text-2xl">9+ years</span>
-                        <span class="text-sm text-slate-400">Intelligence and Security market</span>
-                    </div>
-                    <div class="p-4 glass rounded-xl">
-                        <span class="block text-sky-400 font-bold text-2xl">20+ years</span>
-                        <span class="text-sm text-slate-400">Software Engineering</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="cg"><h3>Deep Learning</h3><div class="certs">
+<a href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS">Deep Learning Specialization</a><a href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT">Sequence Models Course</a><a href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86">Structuring Machine Learning Projects</a><a href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK">Improving Deep Neural Networks</a><a href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV">Neural Networks and Deep Learning</a><a href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M">Convolutional Neural Networks</a></div></div>
+<div class="cg"><h3>Machine Learning</h3><div class="certs">
+<a href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC">Machine Learning</a></div></div>
+<div class="cg"><h3>Scala and Programming</h3><div class="certs">
+<a href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7">Functional Programming in Scala</a><a href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ">Big Data Analysis with Scala and Spark</a><a href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B">Parallel Programming</a><a href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X">Functional Program Design in Scala</a><a href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T">Functional Programming Principles in Scala</a></div></div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 text-center ">My professional journey</h2>
+<section id="links">
+<h2>Interesting sources I follow</h2>
+<div class="chips">
+<a href="https://www.alexandercowan.com/">Alex Cowan</a><a href="https://news.ycombinator.com/">Hacker News</a><a href="https://dev.to/">dev.to</a><a href="https://towardsdatascience.com/">Towards Data Science</a><a href="https://machinelearningmastery.com/blog/">Machine learning mastery</a><a href="https://www.fast.ai/">Fast AI</a><a href="https://nonzerosum.games/">Non zero sum games</a><a href="https://charlesmartin14.wordpress.com/">calculated</a><a href="http://radar.oreilly.com/">O’Reilly Radar</a><a href="https://www.thefastmode.com/">The Fast Mode</a><a href="http://www.creativebloq.com/">Creative Bloq</a><a href="http://arstechnica.com/">Ars Technica</a><a href="https://www.wired.com/">Wired</a><a href="https://theintercept.com/">The Intercept</a><a href="https://www.economist.com/">The Economist</a><a href="https://citizenlab.ca/">The Citizen Lab</a><a href="https://www.politico.com/">Politico</a><a href="https://www.getflack.com/">Flack</a>
+</div>
+<p style="color:var(--mut);margin-top:14px">…and many others.</p>
+</section>
 
-        <div class="space-y-8">
-            <!-- Experience Item 1 -->
-            <div
-                class=" glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
-                <div class="md:w-1/4">
-                    <span class="text-sky-400 font-bold">Currently</span>
-                    <h3 class="text-xl font-bold mt-1"><a href="https://www.anritsu.com/en-gb/service-assurance"
-                            target="_blank">Product Manager</a></h3>
-                    <p class="text-slate-400">Telco Service Assurance</p>
-                </div>
-                <div class="md:w-3/4">
-                    <p class="">
-                        <b>Senior Product Manager | AI Diagnostics &amp; API Automation</b> -
-                        Leading lead the global AI Diagnostics and API portfolio, driving strategy and GTM for Tier-1
-                        operators across four continents. Delivered double-digit improvements in root cause analysis
-                        through advanced AI integration. Additionally, serving as Security Champion for SSDLC compliance
-                        and lead SAFe Agile transformation to streamline enterprise-wide delivery and time-to-market.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Experience Item 2 -->
-            <div
-                class=" glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
-                <div class="md:w-1/4">
-                    <span class="text-slate-500 font-bold">Past Role</span>
-                    <h3 class="text-xl font-bold mt-1"><a href="https://www.ips-intelligence.com/en/solutions"
-                            target="_blank">Product Manager</a></h3>
-                    <p class="text-slate-400">Security &amp; Intelligence</p>
-                </div>
-                <div class="md:w-3/4">
-                    <p class="">
-                        <b>Product Manager</b> of a deep learning-based Fusion Center platform designed for real-time
-                        situational
-                        awareness. Integrating location data, radar inputs, and geo-tagged multimedia from hundreds of
-                        thousands of
-                        sources to deliver a comprehensive, unified view of regional security status, supporting
-                        critical
-                        operations in defense and public safety domains.<br>
-                        <b>Product Manager</b> of the leader Law Enforcement Monitoring Facility product, serving 20+
-                        countries worldwide
-                        in their mission to elevate the public safety to a higher standard.
-                    </p>
-                </div>
-            </div>
-            <!-- Experience Item 3 -->
-            <div
-                class=" glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
-                <div class="md:w-1/4">
-                    <span class="text-slate-500 font-bold">Previous experiences</span>
-                    <h3 class="text-xl font-bold mt-1"><a href="https://www.ips-intelligence.com/en/lawful-interception"
-                            target="_blank">Engineering Team Manager</a></h3>
-                    <p class="text-slate-400">Enterprise Development</p>
-                </div>
-                <div class="md:w-3/4">
-                    <p class="">
-                        <b>Engineering Manager</b> of the company’s cross-functional AI team, leading the development
-                        and deployment
-                        of machine learning solutions across multiple business areas.<br>
-                        <b>Engineering Team Manager</b> for the successful implementation of an Avaya Aura Contact
-                        Center recording system,
-                        enabling secure, high-quality voice capture and compliance monitoring.
-                        Led the development of a script analysis solution aimed at enhancing Contact Center performance
-                        and customer
-                        experience through intelligent quality assessment and optimization.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Articles Section -->
-    <section id="articles" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 text-center ">Articles</h2>
-
-        <div class="space-y-8">
-            <!-- Experience Item 1 -->
-            <div
-                class=" glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
-                <div class="md:w-1/4">
-                    <span class="text-sky-400 font-bold">Aug 8, 2023</span>
-                    <h3 class="text-xl font-bold mt-1">
-                        <a target="_blank"
-                            href="https://medium.com/anritsu-service-assurance/leveraging-data-for-network-and-service-optimization-the-power-of-pcap-exports-and-ai-models-927edd482818">
-                            Leveraging Data for Network and Service Optimization: The
-                            Power of PCAP Exports and AI Models
-                        </a>
-                    </h3>
-                    <p class="text-slate-400">Medium <i class="fa-brands fa-medium"></i></p>
-                </div>
-                <div class="md:w-3/4">
-                    <p class="">
-                        How telecommunications operators are evolving by transforming PCAP data from a simple
-                        troubleshooting tool
-                        into a foundational asset for artificial intelligence. By feeding these granular packet captures
-                        into
-                        machine learning models, providers can move beyond reactive maintenance and instead proactively
-                        optimize
-                        their infrastructure. This integration allows for the real-time detection of anomalies and the
-                        automated
-                        management of traffic spikes, ultimately leading to lower operational costs and a significantly
-                        more
-                        reliable experience for the end user.
-                    </p>
-                </div>
-            </div>
-            <!-- Experience Item 2 -->
-            <div
-                class=" glass p-8 rounded-2xl flex flex-col md:flex-row gap-6 hover:border-sky-500/50 transition-colors">
-                <div class="md:w-1/4">
-                    <span class="text-sky-400 font-bold">June 11, 2026</span>
-                    <h3 class="text-xl font-bold mt-1">
-                        <a target="_blank"
-                            href="https://service-assurance.anritsu.eu/blog/the-real-cost-of-a-4-hour-outage">
-                            The Real Cost of a 4-Hour Outage  (It Is Not What Your SLA Says)
-                        </a>
-                    </h3>
-                    <p class="text-slate-400">Anritsu Service Assurance</i></p>
-                </div>
-                <div class="md:w-3/4">
-                    <p class="">
-                        When network operators calculate the cost of an outage, they typically start with the SLA. 
-                        How many minutes of downtime? What is the penalty per minute under the agreement? 
-                        Add it up, report it to the business, and move on.
-
-                        This is a reasonable starting point. But it dramatically understates the real cost of poor network 
-                        reliability — and understanding the full picture changes how organisations should think about 
-                        investing in operations capability.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills/Interests -->
-    <section id="skills" class="py-24 px-6 md:px-12 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12 ">Skills &amp; Expertise</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 ">
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-project-diagram text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Product Strategy</h1>
-                    <small>Strategic Roadmapping and multi-million € portfolio leadership</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-network-wired text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Telco Market</h1>
-                    <small>Deep expertise in Service Assurance for NOC and Engineering teams.</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-globe text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Intelligence Market</h1>
-                    <small>Deep expertise Intelligence and Lawful Interception markets.</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-brain text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Artificial Intelligence</h1>
-                    <small>Multiple certifications, hands-on experiences, production delivery from 2019</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-microphone text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Communication</h1>
-                    <small>Presentation and communication skills, public speaking at events.</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-user text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Deep user empathy</h1>
-                    <small>Understanding the customers' "pain points" rather than just the features they ask for.</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-user-group text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Team leadership</h1>
-                    <small>Managed teams with up to 20 senior engineers and project managers.</small>
-                </div>
-
-                <div class="p-6 glass rounded-2xl hover:bg-sky-500/10 transition-all">
-                    <i class="fas fa-code text-3xl text-sky-400 mb-4"></i>
-                    <h1 class="font-bold">Tech</h1>
-                    <small>Always up-to-date on latest tech and trends.</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Placeholder -->
-    <section id="certifications" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-center ">Certifications</h2>
-        <div class="grid md:grid-cols-3 gap-6 ">
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Deep Learning Specialization
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/HE3ELV3ZNTJS"
-                        target="_blank">
-                        <img alt="certificate" src="images/cert12_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Sequence Models Course
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/4TP6YLYSNMNT" target="_blank">
-                        <img alt="certificate" src="images/cert11_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Structuring Machine Learning Projects
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/52ZNC2VR8F86" target="_blank">
-                        <img alt="certificate" src="images/cert10_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Improving Deep Neural Networks
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/FMGD6RASYXYK" target="_blank">
-                        <img alt="certificate" src="images/cert9_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Neural Networks and Deep Learning
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/49LFJ2G5CGYV" target="_blank">
-                        <img alt="certificate" src="images/cert8_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Convolutional Neural Networks
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/A9R8G37JL28M" target="_blank">
-                        <img alt="certificate" src="images/cert7_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Functional Programming in Scala
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/ABQDV7MBXEG7"
-                        target="_blank">
-                        <img alt="certificate" src="images/cert6_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Big Data Analysis with Scala and Spark
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/7K8RHFAUU4NZ" target="_blank">
-                        <img alt="certificate" src="images/cert5_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Parallel Programming
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/TPLFUTPT6R5B" target="_blank">
-                        <img alt="certificate" src="images/cert4_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Functional Program Design in Scala
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/JB7565KXDU2X" target="_blank">
-                        <img alt="certificate" src="images/cert3_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Functional Programming Principles in Scala
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/YEA348DTAJ9T" target="_blank">
-                        <img alt="certificate" src="images/cert2_small.webp">
-                    </a>
-                </p>
-            </div>
-            <div class="glass p-8 rounded-2xl border-2 border-dashed border-slate-700 text-center ">
-                Machine Learning
-                <p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/HEGX52WRFYVC" target="_blank">
-                        <img alt="certificate" src="images/cert1_small.webp">
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Links -->
-    <section id="links" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 text-center ">Interesting sources I follow</h2>
-        <div class="grid md:grid-cols-4 gap-6 ">
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.alexandercowan.com/" target="_blank">Alex Cowan</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://dev.to//" target="_blank">dev.to</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://machinelearningmastery.com/blog/" target="_blank">Machine learning mastery</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.fast.ai/" target="_blank">Fast AI</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://nonzerosum.games/" target="_blank">Non zero sum games</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://charlesmartin14.wordpress.com/" target="_blank">calculated</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="http://radar.oreilly.com/" target="_blank">O'Reilly Radar</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.thefastmode.com/" target="_blank">The Fast Mode</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="http://www.creativebloq.com/" target="_blank">Creative Bloq</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="http://arstechnica.com/" target="_blank">Ars Technica</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.wired.com/" target="_blank">Wired</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://theintercept.com/" target="_blank">The Intercept</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.economist.com/" target="_blank">The Economist</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://citizenlab.ca/" target="_blank">The Citizen Lab</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.politico.com/" target="_blank">Politico</a></p>
-            </div>
-            <div class="glass p-4 rounded-2xl border-2  border-slate-700 text-center ">
-                <p><a href="https://www.getflack.com/" target="_blank">Flack</a></p>
-            </div>
-            ...and many others.
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 md:px-12 bg-sky-500/10">
-        <div class="max-w-4xl mx-auto text-center ">
-            <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
-            <p class="text-xl text-slate-400 mb-10">
-                I'm always open to discussing tech, product management, or the latest in Telco.
-            </p>
-            <div class="flex justify-center space-x-8 mb-12">
-                <a target="_blank" href="https://it.linkedin.com/in/danielediminica"
-                    class="plausible-event-name=Linkedin text-2xl hover:text-sky-400 transition-colors contacts">LinkedIn <i
-                        class="fab fa-linkedin"></i></a>
-                <a href="mailto:contact@danielediminica.it"
-                    class="plausible-event-name=Email text-2xl hover:text-sky-400 transition-colors contacts">Mail <i
-                        class="fas fa-envelope"></i></a>
-                <a target="_blank" href="https://medium.com/@daniele.diminica_55640"
-                    class="plausible-event-name=Medium text-2xl hover:text-sky-400 transition-colors contacts">Medium <i
-                        class="fa-brands fa-medium"></i></a>
-            </div>
-            <div class="glass p-8 rounded-3xl inline-block">
-                <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Available for</p>
-                <p class="text-lg">Collaborations • Consulting • Product/Tech Strategy</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 text-center border-t border-slate-800 text-slate-500 text-sm">
-        <p>© 2026 Daniele Di Minica.</p>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = link.getAttribute('href') === `#${current}` ? '#38bdf8' : '';
-            });
-        });
-    </script>
+<section id="contact">
+<div class="cta">
+<h2>Let’s connect</h2>
+<p>I’m always open to discussing tech, product management, or the latest in Telco.</p>
+<div class="btns"><a class="btn p" href="https://it.linkedin.com/in/danielediminica">LinkedIn</a><a class="btn" href="https://medium.com/@daniele.diminica_55640">Medium</a></div>
+<p style="margin:16px 0 0;color:var(--mut);font-size:15px">Available for collaborations, consulting, and product/tech strategy.</p>
+</div>
+</section>
+</main>
+<footer><div class="w">© 2026 Daniele Di Minica.</div></footer>
+<script>
+(function(){var l=document.querySelectorAll('nav a[href^="#"]');
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[x.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-30% 0px -60% 0px'});
+Object.keys(m).forEach(function(i){var el=document.getElementById(i);if(el)o.observe(el)})})();
+</script>
 </body>
-
 </html>
